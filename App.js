@@ -1,21 +1,27 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Ball from './src/Ball';
+import { StackNavigator } from 'react-navigation';
+import MainScreen from '/Components/Mainscreen'
+// import Ball from './src/Ball';
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-       <Ball/>
-      </View>
+     <AppStackNavigator/>
     );
   }
 }
+
+const AppStackNavigator = StackNavigator({
+  Main:{
+    screen: MainScreen
+  }
+})
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+   alignItems:'center',
+   justifyContent:'center',
   },
 });
