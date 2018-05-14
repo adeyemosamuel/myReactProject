@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import MainScreen from '/Components/Mainscreen'
+import MainScreen from './Components/MainScreen'
 // import Ball from './src/Ball';
 export default class App extends React.Component {
   render() {
