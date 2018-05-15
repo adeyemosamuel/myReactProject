@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Platform } from "react-native";
 import { Icon } from "native-base";
 import HomeTab from './AppTabNavigator/HomeTab'
 import SearchTab from './AppTabNavigator/SearchTab'
 import AddMediaTab from './AppTabNavigator/AddMediaTab'
 import LikesTab from './AppTabNavigator/LikesTab'
 import ProfileTab from './AppTabNavigator/ProfileTab'
-import { TabNavigator } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation';
 
 class MainScreen extends Component {
 
@@ -24,7 +24,7 @@ class MainScreen extends Component {
 
 export default MainScreen;
 
-const AppTabNavigator = TabNavigator({
+const AppTabNavigator = createBottomTabNavigator({
      HomeTab:{
          screen: HomeTab
      },
@@ -45,6 +45,23 @@ const AppTabNavigator = TabNavigator({
         screen: ProfileTab
     },
 
+}, {
+    animationEnabled:true,
+    swipeEnabled: true,
+    tabBarPosition:"bottom",
+    tabBarOptions:{
+        style:{
+            ...Platform.select({
+                android:{
+                    backgroundColor:'white'
+                }
+            })
+        },
+        activeTintColor:'#000',
+        inactiveTintColor:'#d1cece',
+        showLabel: false,
+        showIcon:true
+    }
 })
 
 const styles = StyleSheet.create({
