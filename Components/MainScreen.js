@@ -22,7 +22,7 @@ class MainScreen extends Component {
     }
 }
 
-export default MainScreen;
+
 
 const AppTabNavigator = createBottomTabNavigator({
      HomeTab:{
@@ -71,3 +71,5 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     }
 });
+
+export default MainScreen;

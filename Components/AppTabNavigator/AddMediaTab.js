@@ -19,7 +19,7 @@ class AddMediaTab extends Component {
     }
 }
 
-export default AddMediaTab;
+
 
 const styles = StyleSheet.create({
     container:{
@@ -28,3 +28,5 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     }
 });
+
+export default AddMediaTab;
